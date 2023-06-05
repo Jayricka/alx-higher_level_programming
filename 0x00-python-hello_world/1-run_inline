@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Check if the PYCODE environment variable is set
+if [ -z "$PYCODE" ]; then
+  echo "Please set the PYCODE environment variable to the Python code you want to run."
+  exit 1
+fi
+
+# Run the Python code
+python3 -c "$PYCODE"
+
