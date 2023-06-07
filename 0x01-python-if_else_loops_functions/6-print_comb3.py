@@ -5,4 +5,4 @@ for digit1 in range(10):
         if digit1 == 9 and digit2 == 0:
             print("{:d}{:d}".format(digit1, digit2))
         else:
-            print("{:d}{:d}".format(digit1, digit2), end=", ")
+            print("{:d}{:d}".format(digit1, digit2), end=" ")
