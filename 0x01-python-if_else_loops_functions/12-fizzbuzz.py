@@ -1,10 +1,18 @@
+#!/usr/bin/python3
+
+
 def fizzbuzz():
-    for num in range(1, 101):
-        if num % 3 == 0 and num % 5 == 0:
-            print("FizzBuzz", end=" ")
-        elif num % 3 == 0:
-            print("Fizz", end=" ")
-        elif num % 5 == 0:
-            print("Buzz", end=" ")
+    result = []
+    for number in range(1, 101):
+        if number % 3 == 0 and number % 5 == 0:
+            result.append("FizzBuzz")
+        elif number % 3 == 0:
+            result.append("Fizz")
+        elif number % 5 == 0:
+            result.append("Buzz")
         else:
-            print(num, end=" ")
+            result.append(str(number))
+    return " ".join(result)
+
+
+print(fizzbuzz(), end=" $")
