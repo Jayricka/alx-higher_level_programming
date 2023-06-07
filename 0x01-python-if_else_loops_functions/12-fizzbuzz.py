@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-
-
 def fizzbuzz():
     result = []
     for number in range(1, 101):
@@ -15,4 +12,4 @@ def fizzbuzz():
     return " ".join(result)
 
 
-print(fizzbuzz(), end=" $")
+print(fizzbuzz(), end=" $\n")  # Changed from end=" $$"
