@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-
+# Author - Jayricka
 
 def magic_calculation(a, b, c):
-    """Match bytecode provided by Holberton School."""
-    if a < c:
-        return (b)
-    if b > c:
-        return (a + c)
-    return (a*b - b)
+    """Perform the same computation as the provided bytecode."""
+    if a < b:
+        return c
+    elif c > b:
+        return a + b
+    else:
+        return a * b - c
