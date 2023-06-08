@@ -1,15 +1,12 @@
 def fizzbuzz():
-    result = []
     for number in range(1, 101):
-        if number % 3 == 0 and number % 5 == 0:
-            result.append("FizzBuzz")
-        elif number % 3 == 0:
-            result.append("Fizz")
+        if number % 3 == 0:
+            print("Fizz ", end="")
         elif number % 5 == 0:
-            result.append("Buzz")
+            print("Buzz ", end="")
+        elif number % 3 == 0 and number % 5 == 0:
+            print("FizzBuzz ", end="")
         else:
-            result.append(str(number))
-    return " ".join(result)
+            print("{} ".format(number), end="")
 
-
-print(fizzbuzz(), end=" $\n")  # Changed from end=" $$"
+fizzbuzz()
