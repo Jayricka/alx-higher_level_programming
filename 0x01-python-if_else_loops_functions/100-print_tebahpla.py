@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
 
-output = ''
-for i in range(ord('z'), ord('A') - 1, -1):
-    letter = chr(i)
-    case = 'lowercase' if i % 2 == 1 else 'uppercase'
-    output += f'{letter}{case}'
-
-print(output)
+i = 0
+for char in range(ord('z'), ord('A') - 1, -1):
+    print("{}".format(chr(char + i)), end="")
+    i = 32 if i == 0 else 0
