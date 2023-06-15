@@ -1,3 +1,4 @@
+.gitignore
 push
 *main.py
 *main.c
