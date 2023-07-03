@@ -29,8 +29,10 @@ class NQueens:
         for i in range(row):
             if (
                 self.board[i][col] == 1
-                or (col - (row - i) >= 0 and self.board[i][col - (row - i)] == 1)
-                or (col + (row - i) < self.n and self.board[i][col + (row - i)] == 1)
+                or (col - (row - i) >= 0 and
+                    self.board[i][col - (row - i)] == 1)
+                or (col + (row - i) < self.n and
+                    self.board[i][col + (row - i)] == 1)
             ):
                 return False
         return True
