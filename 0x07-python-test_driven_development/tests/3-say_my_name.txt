@@ -8,14 +8,12 @@ The function "say_my_name(...)" is used to display the message "My name is <firs
 ::
 
 python
-Copy code
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 >>> say_my_name("Brennan", "Baraban")
 My name is Brennan Baraban
 ::
 
 python
-Copy code
 >>> say_my_name("Cornelius Maxwell", "Jones II")
 My name is Cornelius Maxwell Jones II
 The parameter "last_name" is not mandatory. If no last name is provided, an empty string will be displayed.
@@ -23,7 +21,6 @@ The parameter "last_name" is not mandatory. If no last name is provided, an empt
 ::
 
 python
-Copy code
 >>> say_my_name("Brennan")
 My name is Brennan 
 Invalid Names
@@ -31,29 +28,21 @@ The "first_name" and "last_name" parameters should only be strings. Otherwise, a
 
 ::
 
-vbnet
-Copy code
 >>> say_my_name(6, "James")
 Traceback (most recent call last):
 TypeError: first_name must be a string
 ::
 
-vbnet
-Copy code
 >>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
 Traceback (most recent call last):
 TypeError: last_name must be a string
 ::
 
-vbnet
-Copy code
 >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
 Traceback (most recent call last):
 TypeError: first_name must be a string
 ::
 
-python
-Copy code
 >>> say_my_name(None)
 Traceback (most recent call last):
 TypeError: first_name must be a string
@@ -61,12 +50,7 @@ At least one name must be provided.
 
 ::
 
-scss
-Copy code
 >>> say_my_name()
 Traceback (most recent call last):
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
-
-
-
 
