@@ -1,0 +1,22 @@
+import unittest
+from 1-my_list import MyList
+
+class MyListTestCase(unittest.TestCase):
+    def test_print_sorted(self):
+        my_list = MyList()
+        my_list.append(1)
+        my_list.append(4)
+        my_list.append(2)
+        my_list.append(3)
+        my_list.append(5)
+
+        expected_output = [1, 2, 3, 4, 5]
+
+        # Test the print_sorted method
+        with self.assertLogs(level='INFO') as cm:
+            my_list.print_sorted()
+        
+        self.assertEqual(my_list, expected_output)
+
+if __name__ == '__main__':
+    unittest.main()
