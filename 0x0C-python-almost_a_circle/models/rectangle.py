@@ -91,6 +91,11 @@ class Rectangle(Base):
             'y': self.y
         }
 
+    def update(self, **kwargs):
+        """Updates the attributes of the Rectangle instance"""
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
     def __str__(self):
         """Returns a string representation of the Rectangle instance"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
