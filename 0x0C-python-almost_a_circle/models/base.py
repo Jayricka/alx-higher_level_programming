@@ -12,9 +12,6 @@ class Base:
         """
         Initializes a Base instance.
 
-        Args:
-            id (int, optional): The id value for the instance.assigns a unique value 
-
         Attributes:
             id (int): The id value of the instance.
         """
