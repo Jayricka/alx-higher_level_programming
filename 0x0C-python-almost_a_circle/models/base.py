@@ -12,7 +12,7 @@ class Base:
         Initializes a Base instance.
 
         Args:
-            id (int): The id value for the instance. If None, a unique id will be assigned.
+            id (int): The id value for the instance.
 
         Attributes:
             id (int): The id value of the instance.
