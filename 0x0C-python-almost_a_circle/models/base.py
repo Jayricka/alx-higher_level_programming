@@ -100,4 +100,3 @@ class Base:
                 return [cls.create(**d) for d in dict_list]
         except FileNotFoundError:
             return []
-
