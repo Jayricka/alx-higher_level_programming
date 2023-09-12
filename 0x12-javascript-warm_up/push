@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 read -p "Enter commit message: " name
 git add .
