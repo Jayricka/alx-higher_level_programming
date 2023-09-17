@@ -1,36 +1,17 @@
 #!/usr/bin/python3
-"""This script lists states starting with 'N' from the hbtn_0e_0_usa database."""
-
-import mysqlclient
+"""  lists all states from the database hbtn_0e_0_usa """
+import MySQLdb
 import sys
 
-def filter_states_by_name(username, password, db_name):
-    """Connects to MySQL and retrieves states starting with 'N'."""
-    # Connect to the MySQL server
-    db = mysqlclient.connect(host="localhost", port=3306, user=username, passwd=password, db=db_name)
-    cursor = db.cursor()
-
-    # Execute the SQL query to select states with names starting with 'N'
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
-
-    # Fetch all the rows
-    filtered_states = cursor.fetchall()
-
-    # Display the results
-    for state in filtered_states:
-        print(state)
-
-    # Close the cursor and database connection
-    cursor.close()
-    db.close()
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: ./1-filter_states.py <username> <password> <db_name>")
-        sys.exit(1)
-
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-
-    filter_states_by_name(username, password, db_name)
+    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
+    cur = db.cursor()
+    cur.execute("""SELECT * FROM states WHERE name
+                LIKE BINARY 'N%' ORDER BY states.id""")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.close()
+    db.close()
