@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """This script lists states starting with 'N' from the hbtn_0e_0_usa database."""
 
-import mysql.connector
+import mysqlclient
 import sys
 
 def filter_states_by_name(username, password, db_name):
     """Connects to MySQL and retrieves states starting with 'N'."""
     # Connect to the MySQL server
-    db = mysql.connector.connect(host="localhost", user=username, password=password, database=db_name)
+    db = mysqlclient.connect(host="localhost", port=3306, user=username, passwd=password, db=db_name)
     cursor = db.cursor()
 
     # Execute the SQL query to select states with names starting with 'N'
