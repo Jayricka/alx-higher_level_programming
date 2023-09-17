@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-This script prints all City objects from the database hbtn_0e_14_usa.
-"""
+"""Script that prints all City objects from the database hbtn_0e_14_usa"""
 
 import sys
 from sqlalchemy import create_engine
@@ -25,7 +23,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    cities = session.query(City, State).join(State).order_by(City.id).all()
+    cities = session.query(City, State)\
+        .filter(City.state_id == State.id)\
+        .order_by(City.id)\
+        .all()
 
     for city, state in cities:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
