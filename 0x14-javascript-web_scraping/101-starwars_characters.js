@@ -33,8 +33,3 @@ request(apiUrl, (error, response, body) => {
           }
         });
       }
-    }
-
-    fetchCharacter(0);
-  }
-});
